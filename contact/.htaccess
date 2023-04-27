@@ -1,0 +1,6 @@
+AddHandler x-httpd-php524 .php
+suPHP_ConfigPath /usr/home/xa129024/conf/
+ 
+<Files ~ "\.ini">
+deny from all
+</Files>
