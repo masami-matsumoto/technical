@@ -168,5 +168,17 @@
 </div>
 <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script> 
 <script src="/assets/js/script.js"></script>
+<!-- reCAPTCHA V3 -->
+<script src="https://www.google.com/recaptcha/api.js?render=6LewqEMdAAAAADYXhRnGs7D-SqEfPbp-xyoUmFOl"></script>
+<script>
+      function onClick(e) {
+        e.preventDefault();
+        grecaptcha.ready(function() {
+          grecaptcha.execute('6LewqEMdAAAAADYXhRnGs7D-SqEfPbp-xyoUmFOl', {action: 'submit'}).then(function(token) {
+              // Add your logic to submit to your backend server here.
+          });
+        });
+      }
+  </script>
 </body>
 </html>
